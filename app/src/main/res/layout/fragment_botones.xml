@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    tools:context=".Fragments.BotonesReproductorFragment">
+
+    <TextView
+        android:id="@+id/enReproduccion"
+        android:layout_width="169dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:background="#521785"
+        android:gravity="center"
+        android:hint="@string/canci_n_actual"
+        android:textAlignment="center"
+        android:textColorHint="#fff"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/nextMusic"
+        app:layout_constraintTop_toBottomOf="@+id/pause" />
+
+    <TextView
+        android:id="@+id/reproduciendo"
+        android:layout_width="145dp"
+        android:layout_height="40dp"
+        android:background="#521785"
+        android:gravity="center"
+        android:text="@string/en_reproducci_n"
+        android:textAlignment="center"
+        android:textColor="#ffff"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/enReproduccion"
+        app:layout_constraintEnd_toStartOf="@+id/enReproduccion"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="@+id/backMusic"
+        app:layout_constraintTop_toBottomOf="@+id/pause"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/pause"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.326"
+        app:srcCompat="@android:drawable/ic_media_pause" />
+
+    <ImageButton
+        android:id="@+id/backMusic"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/pause"
+        app:layout_constraintTop_toTopOf="@+id/pause"
+        app:srcCompat="@android:drawable/ic_media_previous" />
+
+    <ImageButton
+        android:id="@+id/nextMusic"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toEndOf="@+id/pause"
+        app:layout_constraintTop_toTopOf="@+id/pause"
+        app:srcCompat="@android:drawable/ic_media_next" />
+
+    <fragment
+        android:id="@+id/playFragment"
+        android:name="com.example.recycler.Fragments.BotonPlayFragment"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/pause"
+        app:layout_constraintEnd_toEndOf="@+id/pause"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/pause"
+        app:layout_constraintTop_toTopOf="@+id/pause"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
